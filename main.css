@@ -4,80 +4,148 @@ body {
     align-items: center;
     justify-content: center;
 }
+/** FONT LIST **/
+a, h2, button {
+    font-family: calibri;
+}
+p {
+    font-family: tahoma;
+}
+.background-two p {
+    font-family:tahoma;
+    font-weight: bold;
+}
 
+/** MAIN CSS **/
 :root {
-    --light-green: rgb(177, 233, 177);
+    --light-green: rgb(34, 125, 34);
 }
 
-body {
-    height: auto;
-    width: 100vw;
-    overflow-x: hidden;
-}
-table:nth-of-type(2) {
-    position: absolute;
-    top: 25%;
-    height: 500px;
-}
-table:nth-of-type(3) {
-    position: absolute;
-    top: 60%;
-}
 .driver {
-    inset: 0;
-    position: absolute; 
     background-color: black;
-    width: 90%;
-    height: 3000px;
+    width: 99%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    max-width: 800px;
 }
 .driver td {
     padding: 15px;
 }
-.section-1 p {
+table p {
     color: white;
-    font-size: 150%;
+    font-size: 120%;
 }
-.section-1 h2 {
+table h2 {
     color: var(--light-green);
+    font-size: 300%;
 }
-.section-1 button {
+table button {
     padding: 15px;
     font-weight: bold;
     font-size: 130%;
 }
-.section-1 .background-wrap {
+table .background-wrap {
     position: relative;
 }
-.section-1 .background {
-    position: absolute;
+table .background td {
     background-color: var(--light-green);
-    height: 250px;
-    width: 100%;
-}
-.background.two {
-    width: 75%;
+    height: 200px;
+    width: 200%;
+    position: relative;
     left: 50%;
-    transform: translateX(-50%) translateY(50%);
+    transform: skewY(-8deg) translateX(-50%) translateY(-30%);
+} 
+.background img {
+    width: 200px;
+    transform: skewY(8deg);
+} 
+.background td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table .background-two {
+    transform: skewY(0);
+    display: flex;
+    justify-content: center;
+}
+.background-two p {
+    background-color: var(--light-green);
+    width: 75%;
+    height: 200px;
+    padding: 25px;
+    box-sizing: border-box;
+    font-size: 350%;
+    position: relative;
+}
+.background-two p i {
+    font-size: 10px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+table .icon {
+    display: flex;
+}
+.icon p {
+    padding: 25px;
+    width: 75%;
+    text-align: left;
+}
+.icon img {
+    height: 75px;
+    width: 75px;
+}
+.info td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.info b {
+    font-size: 150%;
+}
+#fine-print-wrap {
+    display: flex;
+    justify-content: center;
 }
 #fine-print {
-    margin-top: 100px;
+    margin-top: 50px;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-    width: 75%;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 60%;
     padding: 50px;
+    position: relative;
+    font-size: 80%;
 }
-#links {
-    position: absolute;
-    bottom: 0;
-    padding: 50px;
-}
-#links td {
-    width: auto;
+.query {
+    line-height: 0;
     padding: 0;
-    line-height: 0
+    height: 5px;
 }
-#links a {
+table a {
     text-decoration: none;
+    font-size: 12px;
+    left: 5%;
+    position: relative;
+}
+#socials {
+    display:flex;
+    justify-content: space-between;
+}
+#socials img {
+    height: 25px;
+    width: 25px;
+}
+
+@media only screen and (min-width: 500px) {
+    .background img {
+        width: 250px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .background-two p {
+        font-size: 200%;
+    }
 }
