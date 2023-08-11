@@ -45,6 +45,8 @@ table button {
     padding: 15px;
     font-weight: bold;
     font-size: 130%;
+    color: black;
+    border-radius: 0;
 }
 table .background-wrap {
     position: relative;
