@@ -60,6 +60,7 @@ table:nth-of-type(3) {
     transform: translateX(-50%) translateY(50%);
 }
 #fine-print {
+    margin-top: 100px;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     width: 75%;
